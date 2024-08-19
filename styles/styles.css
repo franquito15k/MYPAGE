@@ -1,0 +1,111 @@
+/* variables */
+:root {
+  --rad: 0.7rem;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-family: "Nunito", sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+}
+
+html,
+body,
+footer {
+  padding: 0;
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+.black-text {
+  color: black;
+}
+
+.start,
+.center,
+.end,
+.flex,
+.justify-between {
+  display: flex;
+}
+/*un simple container */
+.container {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0 auto;
+}
+.start {
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+}
+
+.end {
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-1 {
+  padding: var(--rad);
+}
+
+/* barra de navegación */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* texto de metacritics formato */
+#text {
+  color: #ffffff;
+  padding-left: 4%;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* fondo cubrir todo */
+.full-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60px;
+}
+
+/* formato para la search bar */
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+}
+
+/*pading y centrado*/
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* dondo negro */
+.bg-black {
+  background-color: black;
+}
