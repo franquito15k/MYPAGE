@@ -1,0 +1,27 @@
+.layout {
+    display: flex;
+  }
+  
+  .product-list {
+    width: 25%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    transition: transform 0.3s ease; /* Animación suave */
+    transform: translateX(-100%); /* Esconder inicialmente */
+  }
+  
+  .product-list.visible {
+    transform: translateX(0); /* Mostrar el aside */
+  }
+  
+  main {
+    width: 100%; /* Ocupa el 100% cuando aside está oculto */
+    padding: 20px;
+    transition: width 0.3s ease;
+  }
+  
+  .product-list.visible + main {
+    width: 75%; /* Ajusta el ancho cuando el aside está visible */
+  }
+  

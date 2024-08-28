@@ -1,0 +1,153 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Interactive</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/comprar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="full-bg">
+      <div class="container">
+        <!-- icon -->
+        <a href="/index.html">
+          <div class="start p-1">
+            <img src="../img/icon-metacritics.png" alt="Icon Metacritic" />
+            <p id="text">metacritic</p>
+          </div>
+        </a>
+        <nav class="p-1 end">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/games.html">Games</a></li>
+            <li><a href="/pages/movies.html">Movies</a></li>
+            <li><a href="/pages/music.html">Music</a></li>
+          </ul>
+        </nav>
+
+        <div class="center p-1">
+          <form role="search">
+            <input
+              id="search"
+              type="search"
+              placeholder="Search..."
+              autofocus
+              required
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="button-container">
+          <a href="/pages/comprar.html" class="register-button">Registrarse</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="purchase-form">
+        <div class="container">
+          <h2>Formulario de donacion</h2>
+          <form action="/submit-purchase" method="post">
+            <!-- Nombre del Cliente -->
+            <div class="form-group">
+              <label for="name">Nombre del Cliente:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ingresa tu nombre"
+                required
+              />
+            </div>
+
+            <!-- Dirección -->
+            <div class="form-group">
+              <label for="address">Dirección:</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Ingresa tu dirección"
+                required
+              />
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+              <label for="phone">Teléfono:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Ingresa tu teléfono"
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ingresa tu e-mail"
+                required
+              />
+            </div>
+
+            <!-- Medio de Pago -->
+            <div class="form-group">
+              <label for="payment-method">Medio de Pago:</label>
+              <select id="payment-method" name="payment-method" required>
+                <option value="" disabled selected>
+                  Selecciona tu medio de pago
+                </option>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="debit-card">Tarjeta de Débito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+              </select>
+            </div>
+
+            <!-- Listado de Productos -->
+            <div class="form-group">
+              <label for="product-list">Listado de Productos:</label>
+              <textarea
+                id="product-list"
+                name="product-list"
+                placeholder="Lista los productos que deseas comprar"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <div class="form-group">
+              <button
+                type="button"
+                class="submit-btn"
+                onclick="window.location.href='/index.html'"
+              >
+                Realizar Compra
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div><!--Nombre de la pag--></div>
+      <div><!--Container politicas, redes sociales, patrocinadores--></div>
+      <div><!--Derechos de autor por la pag--></div>
+    </footer>
+  </body>
+</html>

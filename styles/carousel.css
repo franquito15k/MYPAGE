@@ -1,0 +1,108 @@
+html,
+body,
+footer {
+  padding: 0;
+  font-family: var(--font-family);
+  margin: 0;
+  overflow: auto;
+}
+
+.full-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60px;
+  padding: 1rem;
+}
+.title {
+    font-family: var(--font-family);
+    color: #000000;
+    text-align: center;
+    font-weight: 300;
+    font-size: 35px;
+  }
+  
+  .h-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .controls button {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .controls button:hover {
+    background-color: #e0e0e0;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+  }
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 200px; /* Controla el ancho del contenedor del ítem */
+    margin-right: 10px;
+    background-color: #dbd5d5;
+    border-style: dashed;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    text-align: center; /* Asegura que el contenido esté centrado */
+    padding: 15px; /* Agrega algo de padding si es necesario */
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .next,
+  .prev {
+    display: block;
+  }
+  .item-info {
+    margin-top: 10px;
+  }
+  
+  .item-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .item-info .category {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .item-info .score {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #57bd84; /* O el color que prefieras */
+    margin-top: 5px;
+  }

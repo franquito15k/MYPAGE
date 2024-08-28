@@ -8,15 +8,27 @@
   --height: 5rem;
   --btn-width: 6rem;
 }
-
+.button-style {
+  font-family: "Nunito",sans-serif;
+  color: #000000;
+  font-size: larger;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
 html,
 body,
 footer {
   padding: 0;
   font-family: var(--font-family);
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
+img {
+  height: 65px;
+  width: 65px;
+}
 .black-text {
   color: black;
 }
@@ -28,6 +40,12 @@ footer {
 .justify-between {
   display: flex;
 }
+
+.flex-col {
+  flex-direction: column;
+  align-items: center;
+}
+
 /*un simple container */
 .container {
   width: 100%;
@@ -87,6 +105,7 @@ nav ul li a {
   background-repeat: no-repeat;
   width: 100%;
   height: 60px;
+  padding: 1rem;
 }
 
 /* formato para la search bar */
@@ -108,4 +127,49 @@ header .container {
 /* dondo negro */
 .bg-black {
   background-color: black;
+}
+
+.register-button {
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.product-list {
+  width: 25%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.product-list th {
+  background-color: #f2f2f2;
+}
+
+main {
+  width: 75%;
+  padding: 20px;  
+  padding: 1rem;
+
 }
