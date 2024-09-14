@@ -1,0 +1,16 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "Este repositorio esta hecho para almacenar la progresion del trabajo final de web y base de datos. Donde se veran cosas como HTML, CSS, JAVASCRIPT, y las formas de diseñar una base de datos local y como conectares, hacer peticiones, carga de datos, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "ytdl-core": "^4.11.5"
+  }
+}

@@ -1,0 +1,86 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Download</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css">
+
+  </head>
+
+  <body>
+    <header >
+      <div class="flex row">
+        <div class="flex row" id="nav"><!--row-->
+          <a class="buttom-style" href="/templates/index.html" id="home">Instant Download</a>
+          <div class="flex row" id="button-nav">
+            <a href="index.html" class="buttom-style video-button">Descargar Video de Youtube</a>
+            <a href="index.html" class="buttom-style audio-button">Descargar Audio de Youtube</a>
+          </div>
+        </div>
+
+        <div class="flex column" id="login"><!--column-->
+          <a class="buttom-style" href="/pages/register.html">Registrate</a>
+          <a class="buttom-style" href="/pages/login.html">Ingresar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-section">
+      <div class="recuadros" ><!--main flex column -->
+
+        <section class="flex column align-items-center "><!--flex descarga video url column  -->  
+          <h3><!--texto-->
+            Descargar Video de Youtube
+          </h3>
+
+          <!--flex row-->
+          <form class="flex row justify-row" id="downloadForm"> 
+            <div>
+              <input type="text" name="url" id="url" placeholder="Pegar el enlace del video..." required>
+            </div>
+            <div><!--buttom-->
+              <button type="submit">Obtener el video del enlace</button> 
+            </div>
+          </form><!--input url-->
+          
+          <p id="status"></p>
+        </section>
+
+        <section class=""><!--explicacion de uso, flex row-->
+          
+          <div><!--texto column-->
+
+            <div>
+              <h3></h3>
+              <article></article><!--row flex-->
+            </div><!--como descargar-->
+
+            <div><!--explicacion del proyecto-->
+              <h3></h3>
+              <p></p>
+            </div>
+
+            <div><!--no funciona-->
+              <h3></h3>
+              <article></article><!--row flex-->
+            </div>
+
+          </div>
+          
+          <aside></aside><!--top10 column-->
+      
+        </section>
+
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="/scripts/python.js"></script>
+  </body>
+</html>
