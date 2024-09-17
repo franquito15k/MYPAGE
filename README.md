@@ -13,3 +13,5 @@ Se corrigio comentarios hacerca de mejoras hacia la pagina, se reestructura la e
 
 ## Entrega del tp2
 Se espera implementar un uso de servidor node.js para poder descargar videos de youtube a traves de javascript, asi poder recibir una solicitud del usuario y enviarle lo que espera que es un archivo de video mp4 o mp3 en caso de audio.
+- para correr el codigo de python hay que instalar la libreria import yt_dlp
+ 

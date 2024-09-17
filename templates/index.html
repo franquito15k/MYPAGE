@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 
   </head>
 
@@ -17,16 +17,16 @@
     <header >
       <div class="flex row">
         <div class="flex row" id="nav"><!--row-->
-          <a class="buttom-style" href="/templates/index.html" id="home">Instant Download</a>
+          <a class="buttom-style" href="{{url_for('index')}}" id="home">Instant Download</a>
           <div class="flex row" id="button-nav">
-            <a href="index.html" class="buttom-style video-button">Descargar Video de Youtube</a>
-            <a href="index.html" class="buttom-style audio-button">Descargar Audio de Youtube</a>
+            <a href="{{url_for('index')}}" class="buttom-style video-button">Descargar Video de Youtube</a>
+            <a href="{{url_for('index')}}" class="buttom-style audio-button">Descargar Audio de Youtube</a>
           </div>
         </div>
 
         <div class="flex column" id="login"><!--column-->
-          <a class="buttom-style" href="/pages/register.html">Registrate</a>
-          <a class="buttom-style" href="/pages/login.html">Ingresar</a>
+          <a class="buttom-style" href="{{url_for('register')}}">Registrate</a>
+          <a class="buttom-style" href="{{url_for('login')}}">Ingresar</a>
         </div>
       </div>
     </header>
@@ -42,14 +42,16 @@
           <!--flex row-->
           <form class="flex row justify-row" id="downloadForm"> 
             <div>
-              <input type="text" name="url" id="url" placeholder="Pegar el enlace del video..." required>
+              <label for="url">Pegar alado la URL: </label>
+            </div>
+            <div>
+              <input type="text" name="url" id="url" placeholder="Pegar el enlace aquí..." required>
             </div>
             <div><!--buttom-->
-              <button type="submit">Obtener el video del enlace</button> 
+              <button type="submit" onclick="validateAndDownload()">Obtener el video del enlace</button> 
             </div>
           </form><!--input url-->
           
-          <p id="status"></p>
         </section>
 
         <section class=""><!--explicacion de uso, flex row-->
@@ -81,6 +83,7 @@
     </main>
 
     <footer></footer>
-    <script src="/scripts/python.js"></script>
+    <script src="/static/JS/python.js"></script>
+    <script src="/static/JS/inc_global.js"> </script>
   </body>
 </html>
