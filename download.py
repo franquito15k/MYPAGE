@@ -11,6 +11,7 @@ def download_video(url):
         'format': 'best',
         'noplaylist': True,
         'outtmpl': '-',  # Especifica que no se debe guardar en disco
+        'cookiefile': './cookies.txt'  # Asegúrate de proporcionar la ruta correcta
     }
     
     buffer = BytesIO()  # Crea un buffer en memoria para almacenar el video
