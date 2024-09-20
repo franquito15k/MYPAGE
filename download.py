@@ -5,12 +5,31 @@ import json
 
 app = Flask(__name__)
 
-#ruta temporal para enviar el video
-DOWNLOAD_FOLDER = '/downloads'
+# Define la carpeta de descargas relativa al directorio actual
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DOWNLOAD_FOLDER = os.path.join(BASE_DIR, 'downloads')
+
+# Crea la carpeta de descargas si no existe
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
 
-# script propio para descargar el video
+# Funciones para manejar el archivo JSON
+def cargar_json():
+    json_path = os.path.join(BASE_DIR, 'data', 'global.json')
+    if not os.path.exists(json_path):
+        # Si el archivo no existe, lo crea con una estructura inicial
+        os.makedirs(os.path.dirname(json_path), exist_ok=True)
+        with open(json_path, 'w') as json_file:
+            json.dump({"global_download": 0}, json_file, indent=4)
+    with open(json_path, 'r') as json_file:
+        return json.load(json_file)
+
+def guardar_json(data):
+    json_path = os.path.join(BASE_DIR, 'data', 'global.json')
+    with open(json_path, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+
+# Función para descargar el video
 def download_video(url):
     ydl_opts = {
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, '%(title)s.%(ext)s'),
@@ -21,7 +40,30 @@ def download_video(url):
         filename = ydl.prepare_filename(info)
         return filename
 
-# rutas para el redireccionamiento
+@app.route('/download', methods=['POST'])
+def download():
+    data = request.json
+    url = data.get('url')
+
+    if not url:
+        return jsonify({"error": "No se proporcionó una URL"}), 400
+
+    try:
+        # Descargar el video
+        filename = download_video(url)
+
+        # Incrementar el contador de descargas
+        data_json = cargar_json()
+        data_json['global_download'] += 1
+        guardar_json(data_json)
+
+        # Enviar el archivo al cliente
+        return send_file(filename, as_attachment=True)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# Rutas para el redireccionamiento
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -33,43 +75,6 @@ def register():
 @app.route('/login')
 def login():
     return render_template('login.html')
-# rutas para el redireccionamiento
-
-
-# url que recibe e envia solicitud, que es el videoda
-@app.route('/download', methods=['POST'])
-def download():
-    data = request.json
-    url = data.get('url')
-
-    if not url:
-        return jsonify({"error": "No se proporcionó una URL"}), 400
-
-    try:
-        filename = download_video(url)
-        return send_file(filename, as_attachment=True)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-#seccion  para actualziar el json
-def cargar_json():
-    with open('data/global.json', 'r') as json_file:#r es de read o lectura como en c
-        return json.load(json_file)
-
-def guardar_json(data):
-    with open('data/global.json', 'w') as json_file: #w es de write o escritura como en c
-        json.dump(data, json_file, indent=4)
-
-@app.route('/sumar_descarga', methods=['POST'])
-def sumar_descarga():
-    data = cargar_json()
-    
-    data['global_download'] += 1 #incremento mi var de descargas
-    
-    guardar_json(data)
-    
-    return jsonify({"message": "Descarga sumada exitosamente!"})
-#seccion  para actualziar el json
-
 
 if __name__ == '__main__':
     app.run(debug=True)

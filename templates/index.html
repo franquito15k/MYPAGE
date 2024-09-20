@@ -39,8 +39,7 @@
             Descargar Video de Youtube
           </h3>
 
-          <!--flex row-->
-          <form class="flex row justify-row" id="downloadForm"> 
+          <form class="flex row justify-row" id="downloadForm">
             <div>
               <label for="url">Pegar alado la URL: </label>
             </div>
@@ -48,9 +47,13 @@
               <input type="text" name="url" id="url" placeholder="Pegar el enlace aquí..." required>
             </div>
             <div><!--buttom-->
-              <button type="submit" onclick="validateAndDownload()">Obtener el video del enlace</button> 
+              <button type="submit">Obtener el video del enlace</button> 
             </div>
+            <progress id="progressBar" value="0" max="100" style="width: 100%; display: none;"></progress>
           </form><!--input url-->
+          
+          <!-- Barra de progreso -->
+          
           
         </section>
 
