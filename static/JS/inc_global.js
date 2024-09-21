@@ -24,36 +24,3 @@ function sum_download() {
         console.error('Error:', error);
     });
 }
-function startDownload() {
-    const url = document.getElementById('videoUrl').value;
-
-    fetch('/download', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ url })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            alert(data.error);
-        } else {
-            checkProgress();
-        }
-    });
-}
-
-function checkProgress() {
-    fetch('/progress')
-    .then(response => response.json())
-    .then(data => {
-        const progressBar = document.getElementById('progressBar');
-        progressBar.value = data.progress;
-        if (data.status === 'downloading') {
-            setTimeout(checkProgress, 1000);
-        } else if (data.status === 'finished') {
-            alert('¡Descarga completa!');
-        }
-    });
-}

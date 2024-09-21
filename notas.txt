@@ -1,0 +1,3 @@
+hacer un request al backend para ver si esta descargando, cada x cant de segundos 
+cuando no este el response 200 ok, darle un style de cargando al frontend, y cuando
+termina la descarga habilitar la descarga devuelta
