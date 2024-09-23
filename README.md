@@ -11,7 +11,10 @@ Se corrigio comentarios hacerca de mejoras hacia la pagina, se reestructura la e
 - Para la muestra de un producto en particular, solo se lo agrego al opretar la img o el texto de la pelicula de Adam Sandler, en donde te da una pequeña cantidad de informacion.
 - Para las comprar.html se agrego en el header un apartado en donde el usuario se puede registrar y realizar un pago de 1 pelicula en especifico, implementado lo aprendido hacerca de los formularios.
 
-## Entrega del tp2
-Se espera implementar un uso de servidor node.js para poder descargar videos de youtube a traves de javascript, asi poder recibir una solicitud del usuario y enviarle lo que espera que es un archivo de video mp4 o mp3 en caso de audio.
-- para correr el codigo de python hay que instalar la libreria import yt_dlp
- 
+## Entrega del tp2 pero empezando el nuevo proyecto
+- Funcion en python para descargar video.
+- Servidor en python para enviar el video descargar usando flask.
+- Script llamado python.js para realizar la conexion entre el frontend y el backend.
+- Script llamado inc_global.js contador que validad y registrar el total videos descargados en la paginas.
+- Hosting hecho en una maquina de mi propiedad.
+- Paginas adaptativa.
