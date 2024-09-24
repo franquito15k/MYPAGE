@@ -1,12 +1,14 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  color: #8b1a32;
 }
 body {
-  background-color: black;
+  background-color: #461220;
 }
 /*
 body {
@@ -15,24 +17,25 @@ body {
 }*/
 
 header {
-  background-color: gray;/*#5A189A*/
+  background-color: #ce796b; /*#5A189A*/
   margin-bottom: 10px;
 }
 
 .recuadros {
   display: flex;
   flex-direction: column;
-  width: 90%
+  width: 90%;
 }
 
 section {
-    width: 100%;
-    height: 200px;
-
-    background-color: gray;
-    border-radius: 20px;
-    margin: 20px; 
-    
+  width: 100%;
+  height: 200px;
+  background-color: #d6caca;
+  border-radius: 20px;
+  margin: 20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #ce796b;
 }
 
 .flex {
@@ -47,14 +50,14 @@ section {
   flex-direction: column;
 }
 .justify-content-center {
-    justify-content: center;
+  justify-content: center;
 }
 .justify-row {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 a {
   text-decoration: none;
@@ -100,7 +103,7 @@ a {
 }
 
 .video-button:hover {
-  background-color: #F7A072;
+  background-color: #f7a072;
   font-size: 20px;
   box-shadow: 0px 15px 20px rgba(194, 54, 54, 0.4);
   color: #fff;
@@ -108,11 +111,11 @@ a {
 }
 
 .audio-button:hover {
-    background-color: turquoise ;
-    transform: translateY(-5px);
-    font-size: 20px;
-    color: #fff;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: turquoise;
+  transform: translateY(-5px);
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
 }
 
 .buttom-style:active {
