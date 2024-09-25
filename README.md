@@ -18,6 +18,20 @@ Se corrigio comentarios hacerca de mejoras hacia la pagina, se reestructura la e
 - Script llamado inc_global.js contador que validad y registrar el total videos descargados en la paginas.
 - Hosting hecho en una maquina de mi propiedad.
 - Paginas adaptativa.
-## Instalacion
-Instalar python, se puede usar la version que se encuentra en la Microsft Store. Ingresar el nombre de python en el buscador y deberan descargar este version.
+
+## Instalacion/Requerimientos
+- Instalar python, se puede usar la version que se encuentra en la Microsft Store. Ingresar el nombre de python en el buscador y deberan descargar este version.
 ![python install](static/img/python-download.JPG)
+- Tener [Node.js](https://nodejs.org/en) por las dudas.
+- En caso de usar node.js se puede usar el comando `npm install`.
+- En caso de no funcionar el `npm install`, usar lo siguiente para una instalacion manual, se uso Flask para el backend hecho en python `pip install Flask`y para el funcionamiento del script de descargar videos se usa la libreria `pip install yt-dlp`.
+- Importar la libreria `import json` en el codigo de python para el manejo del archivo global.json
+- Instalar Ngrok en caso de levantar a la red para pruebas y luego ejecutar el comando `ngrok http 5000`, pasar a alguien el enlace forwarding `https://d8f1-190-192-99-141.ngrok-free.app` esto solo es un EJEMPLO.
+
+## Observacion o errores no corregidos.
+- Al iniciar la pagina por primera vez y un usuario envia su primer solicitud a la pagina va a saltar un error que no se pudo corregir, solo pasa la primera vez que se inicia la pagina el error no vuelve a ocurrir despues de la primera solicitud, se espera solicionar ese error al final del trabajo.
+- Se quitaron del frontend los redirecionamientos del login como son regirter y login.
+- Se quito el section donde iba a ir todo la informacion de como se utilza la pagina.
+
+
+  
