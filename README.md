@@ -18,3 +18,6 @@ Se corrigio comentarios hacerca de mejoras hacia la pagina, se reestructura la e
 - Script llamado inc_global.js contador que validad y registrar el total videos descargados en la paginas.
 - Hosting hecho en una maquina de mi propiedad.
 - Paginas adaptativa.
+## Instalacion
+Instalar python, se puede usar la version que se encuentra en la Microsft Store. Ingresar el nombre de python en el buscador y deberan descargar este version.
+![python install](static/img/python-download.JPG)
