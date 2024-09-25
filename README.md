@@ -4,7 +4,7 @@ Este repositorio esta hecho para almacenar la progresion del trabajo final de we
 # Link de la pagina
 - El siguiente link deberia de mandar al usuario a la pagina para el testeo y ver el funcionamiento de la misma. En caso de no funcionar la del google docs se debe probar con este ya que se va a estar monitoreando en el caso de no funcionar.
 - Al iniciar por primera vez en la pagina se debe opretar el boton AZUL que dice "Visit Site".
-[Link de la pagina](https://d8f1-190-192-99-141.ngrok-free.app)
+[Link de la pagina](https://trout-bright-reindeer.ngrok-free.app)
 
 ## Primer Avance
 Se agrego la estructura de como sera la pag, puede estar sujetas a cambios en un futuro por las nuevas implementaciones que realizare, cada etiqueta tiene un comentario para imaginar como sera la pag. 
