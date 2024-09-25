@@ -1,9 +1,11 @@
-hacer un request al backend para ver si esta descargando, cada x cant de segundos 
-cuando no este el response 200 ok, darle un style de cargando al frontend, y cuando
-termina la descarga habilitar la descarga devuelta
+-------------------------------------TO DO-------------------------------------
+-hacer un request al backend para ver si esta descargando, cada x cant de segundos.
+-------------------------------------TO DO-------------------------------------
 
 
-[info] 1A-m-DZ26gk: Downloading 1 format(s): 18 
+_____________________________________DOING_____________________________________
+-Errores de descarga del telefono, posible error en la forma que se esta descargando en los tele ya qeu manejan otros metodos de descargas
+"[info] 1A-m-DZ26gk: Downloading 1 format(s): 18 
 [youtube] 1A-m-DZ26gk: Downloading m3u8 information 
 [info] 1A-m-DZ26gk: Downloading 1 format(s): 18 
 [download] Destination: d:\CUENCADELPLATA\3 year\paradigmas 3\integrador\MYPAGE\downloads\Lowest Chess Elo.mp4 
@@ -13,7 +15,14 @@ siendo utilizado por otro proceso: 'd:\\CUENCADELPLATA\\3 year\\paradigmas 3\\in
 ERROR: Unable to rename file: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'd:\\CUENCADELPLATA\\3 year\\paradigmas 3\\integrador\\MYPAGE\\downloads\\Lowest Chess Elo.mp4.part' -> 'd:\\CUENCADELPLATA\\3 year\\paradigmas 3\\integrador\\MYPAGE\\downloads\\Lowest Chess Elo.mp4'. Giving up after 3 retries
 127.0.0.1 - - [24/Sep/2024 18:32:56] "POST /download HTTP/1.1" 500 -
 [download] 100% of    3.32MiB in 00:00:13 at 256.02KiB/s
-127.0.0.1 - - [24/Sep/2024 18:32:57] "POST /download HTTP/1.1" 200 -
+127.0.0.1 - - [24/Sep/2024 18:32:57] "POST /download HTTP/1.1" 200 -"
+
+_____________________________________DOING_____________________________________
 
 
-elimine el section de los comentarios
+-------------------------------------DONE-------------------------------------
+cuando no este el response 200 ok, darle un style de cargando al frontend, y cuando. HECHO
+termina la descarga habilitar la descarga devuelta. HECHO
+elimine el section de los comentarios en el index.html HECHO
+se quito el login porq no es funcional HECHO
+-------------------------------------DONE-------------------------------------
