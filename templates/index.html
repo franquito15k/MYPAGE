@@ -20,20 +20,20 @@
           <a class="buttom-style" href="{{url_for('index')}}" id="home">Instant Download</a>
           <div class="flex row" id="button-nav">
             <a href="{{url_for('index')}}" class="buttom-style video-button">Descargar Video de Youtube</a>
-            <a href="{{url_for('index')}}" class="buttom-style audio-button">Descargar Audio de Youtube</a>
+            <!--<a href="{{url_for('index')}}" class="buttom-style audio-button">Descargar Audio de Youtube</a>-->
           </div>
         </div>
-
-        <div class="flex column" id="login"><!--column-->
-          <a class="buttom-style" href="{{url_for('register')}}">Registrate</a>
-          <a class="buttom-style" href="{{url_for('login')}}">Ingresar</a>
-        </div>
+        <!--  
+          <div class="flex column" id="login">column
+            <a class="buttom-style" href="{{url_for('register')}}">Registrate</a>
+            <a class="buttom-style" href="{{url_for('login')}}">Ingresar</a>
+          </div>
+        -->
       </div>
     </header>
 
-    <main class="main-section">
+    <main>
       <div class="recuadros" ><!--main flex column -->
-
         <section class="flex column align-items-center "><!--flex descarga video url column  -->  
           <h3><!--texto-->
             Descargar Video de Youtube
@@ -51,31 +51,8 @@
             </div>
           </form><!--input url-->
         </section>
+        <img src="/static/img/loadingcat.jpg" alt="loading gif" id="loadingGif" style="display: none;">
 
-        <section class=""><!--explicacion de uso, flex row-->
-          
-          <div><!--texto column-->
-
-            <div>
-              <h3></h3>
-              <article></article><!--row flex-->
-            </div><!--como descargar-->
-
-            <div><!--explicacion del proyecto-->
-              <h3></h3>
-              <p></p>
-            </div>
-
-            <div><!--no funciona-->
-              <h3></h3>
-              <article></article><!--row flex-->
-            </div>
-
-          </div>
-          
-          <aside></aside><!--top10 column-->
-      
-        </section>
 
       </div>
     </main>

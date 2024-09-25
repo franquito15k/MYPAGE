@@ -7,6 +7,15 @@ body {
   overflow-x: hidden;
   color: #8b1a32;
 }
+main {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body {
   background-color: #461220;
 }
@@ -24,12 +33,16 @@ header {
 .recuadros {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 10px;
 }
 
 section {
-  width: 100%;
-  height: 200px;
+  width: 90%;
+  height: 500px;
   background-color: #d6caca;
   border-radius: 20px;
   margin: 20px;
@@ -40,7 +53,7 @@ section {
 
 .flex {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 100px;
 }
 .row {
@@ -120,4 +133,79 @@ a {
 
 .buttom-style:active {
   transform: translateY(-1px);
+}
+#loadingGif {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Móviles Pequeños (hasta 480px) */
+@media (max-width: 600px) {
+  .buttom-style {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 70%; 
+  }
+
+  #login {
+    width: 100%;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  section {
+    height: 120px;
+    padding: 10px;
+    border-width: 5px;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .buttom-style:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .buttom-style {
+    width: 30%;
+    font-size: 14px;
+  }
+
+  #login {
+    width: 20%;
+    flex-direction: column;
+  }
+
+  section {
+    height: 250px;
+  }
+}
+
+/*escritorio*/
+@media (min-width: 1025px) {
+  .buttom-style {
+    width: 20%;
+    font-size: 16px;
+  }
+
+  #login {
+    width: 15%;
+    flex-direction: column;
+  }
+
+  section {
+    height: 300px;
+  }
+  .column {
+    flex-direction: column;
+    height: 100px;
+  }
 }
