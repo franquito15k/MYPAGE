@@ -2,8 +2,21 @@ from flask import Flask, render_template, request, send_file, jsonify
 from yt_dlp import YoutubeDL #libreria para el funcionamiento de la descarga de videos
 import os
 import json
+import mysql.connector
 
 app = Flask(__name__)
+
+# Configuración de la base de datos
+db_config = {
+    'user': 'root',
+    'password': '',
+    'host': 'localhost',
+    'database': 'inter_bd'
+}
+
+def get_db_connection():
+    return mysql.connector.connect(**db_config)
+
 
 # cambio la carpeta de descargas
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -39,6 +52,22 @@ def download_video(url):
         info = ydl.extract_info(url, download=True)
         filename = ydl.prepare_filename(info)
         return filename
+    
+def insertar_descarga(nombre_video):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO descargas_videos (nombre_video) VALUES (%s)", (nombre_video,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+def incrementar_descarga(nombre_video):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE descargas_videos SET cantidades = cantidades + 1 WHERE nombre_video = %s", (nombre_video,))
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 #aca recibe la url enviada por el usuario en donde se procede a descargar el video e enviar al usuario
 @app.route('/download', methods=['POST'])
@@ -52,11 +81,19 @@ def download():
     try:
         # descarga el video
         filename = download_video(url)
+        nombre_video = os.path.basename(filename)
 
-        # incremento el contador de descarga
-        data_json = cargar_json()
-        data_json['global_download'] += 1
-        guardar_json(data_json)
+        # insertar o incrementar el contador de descarga
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM descargas_videos WHERE nombre_video = %s", (nombre_video,))
+        result = cursor.fetchone()
+        if result:
+            incrementar_descarga(nombre_video)
+        else:
+            insertar_descarga(nombre_video)
+        cursor.close()
+        conn.close()
 
         # envia el archivo al usuario
         return send_file(filename, as_attachment=True)
@@ -67,7 +104,7 @@ def download():
 # ruta para el redireccionamiento del html
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.php')
 
 @app.route('/register')
 def register():

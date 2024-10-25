@@ -10,19 +10,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/static/css/styles.css">
+    <!--mmenu.js jquery-->
+    <link href="../static/css/" rel="stylesheet" />
+    <script src="mmenu.js"></script>
 
   </head>
 
   <body>
     <header >
       <div class="flex row">
-        <div class="flex row" id="nav"><!--row-->
+        <div class="flex row" id="nav" style="visibility: visible;"><!--row-->
           <a class="buttom-style" href="{{url_for('index')}}" id="home">Instant Download</a>
           <div class="flex row" id="button-nav">
             <a href="{{url_for('index')}}" class="buttom-style video-button">Descargar Video de Youtube</a>
             <!--<a href="{{url_for('index')}}" class="buttom-style audio-button">Descargar Audio de Youtube</a>-->
           </div>
         </div>
+        <nav id="menu" style="visibility: hidden;">
+          <ul>
+              <li><a href="{{url_for('index')}}">Instante Download</a></li>
+              <li><a href="{{url_for('index')}}">Descargar Video de Youtube</a></li>
+          </ul>
+        </nav>
         <!--  
           <div class="flex column" id="login">column
             <a class="buttom-style" href="{{url_for('register')}}">Registrate</a>

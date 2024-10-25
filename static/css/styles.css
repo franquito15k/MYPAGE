@@ -170,6 +170,13 @@ a {
   .buttom-style:hover {
     transform: translateY(-5px);
   }
+
+  #nav{
+    visibility: hidden;
+  }
+  #menu{
+    visibility: visible;
+  }
 }
 
 /* Tablets (768px a 1024px) */
