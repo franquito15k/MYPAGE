@@ -52,7 +52,8 @@ document
         document.body.appendChild(a);
         a.click();
         a.remove();
-
+        //llamada de js a un archivo php que recibe como parametro la url del video, el archivo php metersa a la base insertar 
+        //en la base de datos el tabla descargas__videos cantidad
         // limpia el formulario al finalizar la solicitud
         document.getElementById("downloadForm").reset();
         hideLoadingGif();

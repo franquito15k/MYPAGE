@@ -42,13 +42,17 @@ header {
 
 section {
   width: 90%;
-  height: 500px;
+  height: 400px;
   background-color: #d6caca;
   border-radius: 20px;
   margin: 20px;
   border-style: solid;
   border-width: 10px;
   border-color: #ce796b;
+  padding: 20px 70px 30px 30px;  
+}
+.pad {
+  padding: 30px;
 }
 
 .flex {
@@ -140,18 +144,74 @@ a {
   object-fit: contain;
 }
 
-/* Móviles Pequeños (hasta 480px) */
+
+/* ASIDE */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+main {
+  width: 70%; 
+}
+#text-img {
+  margin: 0px 0px 5px 5px;
+}
+/* Estilo para el aside */
+.top10-songs {
+  width: 25%;
+  background-color: #ffeb3b;
+  border: 3px solid #f57f17;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+}
+
+.top10-songs h2 {
+  font-size: 1.5em;
+  color: #d84315;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top10-songs ol {
+  list-style-type: decimal-leading-zero;
+  padding-left: 20px;
+}
+
+.top10-songs li {
+  font-size: 1em;
+  color: #4e342e;
+  margin: 8px 0;
+  transition: transform 0.2s;
+}
+
+.top10-songs li:hover {
+  transform: scale(1.1);
+  color: #bf360c;
+}
+/* ASIDE */
+
+/* Móviles Pequeños (hasta 600px) */
 @media (max-width: 600px) {
   .buttom-style {
     font-size: 12px;
     text-align: center;
     padding: 10px 20px;
-    width: 70%; 
+    width: 70%;
   }
-
+  aside{
+    width: 90%; 
+    margin: 10px auto;
+  }
   #login {
     width: 100%;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
   }
 
@@ -170,24 +230,68 @@ a {
   .buttom-style:hover {
     transform: translateY(-5px);
   }
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .top10-songs {
+    width: 70%;
+    margin-top: 20px; 
+  }
 }
 
-/* Tablets (768px a 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Tablets (610px a 720px) */
+@media (min-width: 610px) and (max-width: 1024px) {
   .buttom-style {
     width: 30%;
     font-size: 14px;
   }
-
   #login {
     width: 20%;
     flex-direction: column;
   }
-
+  
   section {
     height: 250px;
+    padding: 20px 70px 30px 30px;
+  }
+
+  #tablet-query {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin: 10px;
+  }
+  .center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .top10-songs {
+
+    width: 70%;
+    margin-top: 20px; 
   }
 }
+
 
 /*escritorio*/
 @media (min-width: 1025px) {
@@ -195,7 +299,12 @@ a {
     width: 20%;
     font-size: 16px;
   }
-
+  #tablet-query{
+    margin-bottom: 20px;  
+  }
+  h2{
+    margin: 10px;
+  }
   #login {
     width: 15%;
     flex-direction: column;
@@ -208,4 +317,5 @@ a {
     flex-direction: column;
     height: 100px;
   }
+
 }
