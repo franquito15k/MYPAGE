@@ -58,6 +58,22 @@ def download_video(url):
         info = ydl.extract_info(url, download=True)
         filename = ydl.prepare_filename(info)
         return filename
+    
+def insertar_descarga(nombre_video):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO descargas_videos (nombre_video) VALUES (%s)", (nombre_video,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+def incrementar_descarga(nombre_video):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE descargas_videos SET cantidades = cantidades + 1 WHERE nombre_video = %s", (nombre_video,))
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 def insertar_descarga(nombre_video):
     conn = get_db_connection()

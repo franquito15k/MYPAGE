@@ -230,6 +230,7 @@ main {
   .buttom-style:hover {
     transform: translateY(-5px);
   }
+<<<<<<< HEAD
   .content-wrapper {
     flex-direction: column;
     align-items: center; 
@@ -242,6 +243,14 @@ main {
   .top10-songs {
     width: 70%;
     margin-top: 20px; 
+=======
+
+  #nav{
+    visibility: hidden;
+  }
+  #menu{
+    visibility: visible;
+>>>>>>> f5a63f88e436adb0dfd1dee396546750ef0c41e5
   }
 }
 
